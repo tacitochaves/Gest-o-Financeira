@@ -1,0 +1,172 @@
+% layout 'principal';
+
+<div class="menu-resultado">
+    <i class="fa fa-file-o fa-2x"></i>
+    <p class="resultado-p">SÃO LUÍS <i class="fa fa-angle-right"></i> Nota</p>
+    <ul class="botao">
+        <!-- Aba para o relatório -->
+        <li>
+            <a href="#relatorio">Relatório</a>
+        </li>
+        <!-- Aba para consolidar -->
+        <li>
+            <a href="#consolidar">Consolidar</a>
+        </li>
+        <!-- Aba para visualizar -->
+        <li>
+            <a href="#visualizar">Visualizar</a>
+        </li>
+        <!-- Aba para lançar -->
+        <li>
+            <a href="#lancar">Lançar</a>
+        </li>
+    </ul>
+ </div>
+    <aside class="nota-container">
+        <div id="lancar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Lançamento de notas</h2>
+            </div>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="#nota-numero">Nome</label>    
+                    <input id="nota-numero" type="text" maxlength="10" placeholder="#000000001" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-data">Data</label>
+                    <input id="nota-data" type="text" maxlength="10" placeholder="dd/mm/aaa" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-serie">Série</label>
+                    <input id="nota-serie" type="text" maxlength="4" placeholder="1" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-cfop-cod">CFOP</label>
+                    <input id="nota-cfop-cod" type="text" maxlength="4" placeholder="5526" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-cfop-desc" class="invisivel">Descrição CFOP</label>
+                    <input id="nota-cfop-desc" type="text" placeholder="GENEROS ALIMENTÍCIOS" />
+                </div>
+                <div class="break-row">
+                    <label for="#nota-fornecedor">Fornecedor</label>
+                    <input id="nota-fornecedor" type="text" maxlength="10"  placeholder="0000000001" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-fornecedor-nome" class="invisivel">Nome do Fornecedor</label>
+                    <input id="nota-fornecedor-nome" type="text" placeholder="DETIIN- SOLUÇÕES INOVADORAS" />
+                </div>
+                <div class="break-row">
+                    <label for="#nota-pesquisa-pc">Carregar plano de contas</label>
+                    <input id="nota-pesquisa-pc" type="text" />
+                </div>
+                <div class="campo">
+                    <label for="#nota-cadastrar-pc" class="invisivel">Add</label>
+                    <a id="nota-cadastrar-pc" href="#"><i class="fa fa-plus-circle"></i></a>
+                </div>
+                <div class="campo">
+                    <label for="#nota-observacao">Observação</label>
+                    <input id="nota-observacao" type="text" placeholder="NOTA RECEBIDA POR ROSELENA NO DIA DD/MM/AAAA" />
+                </div>
+                <hr class="break-row traco" />
+                <div class="conteudo-esconder">
+                    <div class="campo">
+                        <label for="#nota-adicionar">Adicionar produto(s)</label>
+                        <input id="nota-adicionar" type="text" />
+                    </div>                
+                    <div class="campo">                    
+                        <input id="nota-btn-adicionar" class="btn-modelo" type="submit" value="Adicionar" />
+                    </div>                
+                </div>
+                <fieldset class="break-row" id="tabela">
+                <table class="break-row conteudo-esconder">
+                    <tbody>
+                        <tr>
+                            <th class="item-desc">Item</th>
+                            <th class="item-num">Quantidade</th>
+                            <th class="item-num">Preço<span>(unidade)</span></th>
+                            <th class="item-num">Subtotal<span>(produto)</span></th>
+                            <th class="item-num">Ações</th>
+                        </tr>
+                        <tr>
+                            <td><input class="grid-descricao" value="MELANCIA" /></td>
+                            <td><input class="centralizar grid-campo-valores" value="5" /></td>
+                            <td><input class="centralizar grid-campo-valores" value="1,5" /></td>
+                            <td><input class="centralizar grid-campo-valores" value="8,00" /></td>
+                            <td><a class="nota-remover-item" href="#" title="Remover item">Remover</a></td>
+                        </tr>
+                        <tr>
+                            <td><input class="grid-descricao" value="MELANCIA" /></td>
+                            <td><input class="centralizar grid-campo-valores" value="5" /></td>
+                            <td><input class="centralizar grid-campo-valores value="1,5" /></td>
+                            <td><input class="centralizar grid-campo-valores" value="8,00" /></td>
+                            <td><a class="nota-remover-item" href="#" title="Remover item">Remover</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </fieldset>
+                <div class="break-row campo"> 
+                    <label for="#nota-valor-total">Valor total da nota</label>
+                    <input id="nota-valor-total" type="text" maxlength="20" />
+                </div>
+                <div class="campo">
+                    <input id="nota-btn-salvar" class="btn-modelo" type="submit" value="Salvar" />
+                </div>
+                
+            </fieldset>
+        </div> 
+
+        <div id="visualizar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Visualização de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+        </div> 
+        <div id="consolidar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Consolidação de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+        </div>
+        <div id="relatorio" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Relatório de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+
+        </div> 
+    </aside>
+
+<script>
+    $(function(){
+    // abas
+    // oculta todas as abas
+    $("div.contaba").hide();
+    // mostra somente  a primeira aba
+    $("div.contaba:first").show();
+    // seta a primeira aba como selecionada (na lista de abas)
+    $(".botao a:last").addClass("selected");
+     
+    // quando clicar no link de uma aba
+    $(".botao a").click(function(){
+    // oculta todas as abas
+    $("div.contaba").hide();
+    // tira a seleção da aba atual
+    $(".botao a").removeClass("selected");
+     
+    // adiciona a classe selected na selecionada atualmente
+    $(this).addClass("selected");
+    // mostra a aba clicada
+    $($(this).attr("href")).show();
+    // pra nao ir para o link
+    return false;
+    });
+    });
+</script>
+<script src="/js/igreja-nota.js"></script>

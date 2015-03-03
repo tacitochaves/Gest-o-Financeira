@@ -1,0 +1,147 @@
+% layout 'principal';
+
+<div class="menu-resultado">
+    <i class="fa fa-file-o fa-2x"></i>
+    <p class="resultado-p">SÃO LUÍS <i class="fa fa-angle-right"></i> Nota</p>
+    <ul class="botao">
+        <!-- Aba para o relatório -->
+        <li>
+            <a href="#relatorio">Relatório</a>
+        </li>
+        <!-- Aba para consolidar -->
+        <li>
+            <a href="#consolidar">Consolidar</a>
+        </li>
+        <!-- Aba para visualizar -->
+        <li>
+            <a href="#visualizar">Visualizar</a>
+        </li>
+        <!-- Aba para lançar -->
+        <li>
+            <a href="#lancar">Lançar</a>
+        </li>
+    </ul>
+ </div>
+    <aside class="nota-container">
+        <div id="lancar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Lançamento de notas</h2>
+            </div>
+            <section class="container-item">
+                <table>
+                <tbody>
+                    <tr>
+                        <td><label class="label-nota-numero">Número da nota</label></td>
+                        <td><label class="label-nota-data">Data</label></td>
+                        <td><label class="label-nota-serie">Série</label></td>
+                        <td colspan="3"><label class="label-nota-cfop">CFOP</label></td>
+                        <td><label class="label-nota-observacao">Observação</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="input-nota-numero" type="text" maxlength="10" placeholder="#000000001"></td>
+                        <td><input class="input-nota-data" type="text" maxlength="10" placeholder="dd/mm/aaa"></td>
+                        <td><input class="input-nota-serie" type="text" maxlength="4" placeholder="1"></td>
+                        <td><input class="input-nota-cfop" type="text" maxlength="4" placeholder="552"></td>
+                        <td colspan="2"><input class="input-nota-cfop2" type="text" placeholder="GENEROS ALIMENTÍCIOS"></td>
+                        <td colspan="2"><input class="input-nota-observacao" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="label-nota-fornecedor">Fornecedor</label></td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td><label class="label-nota-plano-contas">Plano de contas</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="input-nota-fornecedor" type="text" maxlength="10"  placeholder="0000000001"</td>
+                        <td colspan="5"><input class="input-nota-fornecedor-nome" type="text" placeholder="DETIIN- SOLUÇÕES INOVADORAS"></td>
+                        <td><select id="select-plano-contas" onChange='Ativar()'>
+                            <option  value="-----" selected>-----</option>
+                            <option value="limpeza">MATERIAIS DE LIMPEZA</option>
+                            <option value="consumo">CONSUMO</option>
+                            <option value="cemar">ENERGIA ELÉTRICA</option>
+                            <option value="caema">COMPANHIA DE ÁGUA E ESGOTO</option>
+                        </td>
+                </tbody>
+                </table>
+                <div class="outro"></div>
+              <div id="conteudo-esconder">  
+              <table>
+                  <tbody>
+                      <tr>
+                          <td colspan="2"><label class="label-nota-adicionar">Adicionar produto(s)</label></td>
+                      </tr>
+                      <tr>
+                          <td colspan="6"><input class="input-nota-adicionar" type="text"></td>
+                          <td><input class="btn-nota-adicionar" type="submit" value="Adicionar"></td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label class="label-nota-adicionar">Valor total da nota</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input class="input-nota-valor-total" type="text" maxlength="20"></td>
+                            <td><input class="btn-modelo" type="submit" value="Salvar"></td>
+                            <td>
+                        </tr>
+                    <tbody>
+                </table>
+            </section>
+        </div> 
+
+        <div id="visualizar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Visualização de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+        </div> 
+        <div id="consolidar" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Consolidação de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+        </div>
+        <div id="relatorio" class="contaba">
+            <div class="cadastro-info">               
+                <h2>Relatório de notas</h2>
+            </div>
+            <section class="container-item">
+
+            </section>
+
+        </div> 
+    </aside>
+
+<script>
+    $(function(){
+    // abas
+    // oculta todas as abas
+    $("div.contaba").hide();
+    // mostra somente  a primeira aba
+    $("div.contaba:first").show();
+    // seta a primeira aba como selecionada (na lista de abas)
+    $(".botao a:last").addClass("selected");
+     
+    // quando clicar no link de uma aba
+    $(".botao a").click(function(){
+    // oculta todas as abas
+    $("div.contaba").hide();
+    // tira a seleção da aba atual
+    $(".botao a").removeClass("selected");
+     
+    // adiciona a classe selected na selecionada atualmente
+    $(this).addClass("selected");
+    // mostra a aba clicada
+    $($(this).attr("href")).show();
+    // pra nao ir para o link
+    return false;
+    });
+    });
+</script>
+<script src="/js/igreja-nota.js"></script>

@@ -1,0 +1,27 @@
+% layout 'account';
+
+<main class="login">
+    <div id="login-box">
+        <div id="login-topo">
+            DEMO - Software Gerencial
+        </div>
+        <aside id="login-data">
+            <label class="login-label-usuario">Usuário</label>
+            <label class="login-label-senha">Senha</label>
+        </aside>  
+        <aside>
+            <form method="post" name="login">
+                <input name="usuario" class="login-input-usuario" type="text" maxlength="15" placeholder="Usuário">
+                <input name="senha" class="login-input-senha" type="password" maxlength="15" placeholder="Senha">
+                <input class="login-btn-acessar" type="submit" value="Acessar">
+            </form>
+        </aside>
+        <hr class="separator">
+        <footer>
+            <p>DETIIN - Desenvolvimento de Tecnologia Inovadora</p>
+            <p>DEMO - Software Gerencial</p>
+            <p>Desenvolvido por DETIIN - Coord. de Desenvolvimento de Sistemas</p>
+            <p>- 2014 -</p>
+        </footer>
+    </div>
+</main>

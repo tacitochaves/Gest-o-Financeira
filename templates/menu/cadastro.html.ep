@@ -1,0 +1,127 @@
+% layout 'principal';
+
+<div class="menu-resultado">
+    <i class="fa fa-file-o fa-2x"></i>
+    <p class="resultado-p">SÃO LUÍS <i class="fa fa-angle-right"></i> Cadastro</p>
+    <ul class="tabs">
+        <!-- Aba para o banco -->
+        <li>
+            <input class="botao" type="radio" checked name="tabs" id="tab1">
+            <label class="rotulo" for="tab1">Banco</label>
+            <div id="tab-conteudo-banco-1" class="tab-conteudo-banco">
+                <div class="cadastro-info">
+                        <h2>Cadastramento de Bancos</h2>
+                </div>
+            <aside class="banco-container">                
+                <form method="post" name="form-banco">
+                    <label class="label-nome-banco">Nome do banco:</label>
+                    <input class="input-nome-banco maiuscula" name="banco" type="text" maxlength="50" autofocus>
+                    <label class="label-agencia">Número da agência:</label>
+                    <input class="input-agencia maiuscula" name="agencia" type="text" maxlength="10">
+                    <label class="label-conta-corrente" >Conta corrente:</label>
+                    <input class="input-conta-corrente maiuscula" name="conta" type="text" maxlength="10">
+                    <input class="cadastro-btn-cancelar" type="reset" value="Cancelar">
+                    <input class="cadastro-btn-salvar" type="submit" value="Salvar">
+                </form>            
+            </aside>
+            </div>
+        </li>
+        <!-- Aba para o cliente -->
+        <li>
+            <input class="botao" type="radio" name="tabs" id="tab2">
+            <label class="rotulo" for="tab2">Cliente</label>
+            <div id="tab-conteudo-cliente-2" class="tab-conteudo-cliente">
+                <div class="cadastro-info">
+                    <h2>Cadastramento de clientes</h2>
+                </div>
+                <aside class="cliente-container">
+                    <ul class="tipo-cliente">
+                        <form method="post" name="form-cliente">
+                            <li>
+                                <input class="input-cliente" type="radio" checked name="aba" id="aba1">
+                                <label class="aba-cliente" for="aba1">Pessoa Física</label>
+                                <div id="tab-conteudo1" class="tab-conteudo">
+                                    <label class="label-nome-cliente">Nome do cliente:</label>
+                                    <input class="input-nome-cliente maiuscula" name="nome" type="text" maxlength="60" autofocus>
+                                    <label class="label-razao-cliente">Razão social:</label>
+                                    <input class="input-razao-cliente maiuscula" name="razao" type="text" maxlength="60">
+                                    <label class="label-cliente-cpf">CPF:</label>
+                                    <input class="input-cliente-cpf" name="cpf" type="text" placeholder="Somente números">
+                                    <label class="label-cliente-endereco">Endereço:</label>
+                                    <input class="input-cliente-endereco" name="endereco" type="text" maxlength="60">
+                                     <select class="select-bairro" name="bairro">
+                                         <option value="---" selected>-----</option>
+                                         <option value="bota">Alemanha</option>
+                                         <option value="fla">Vila Palmeira</option>
+                                         <option value="flu">Cohratrac</option>
+                                         <option value="vasco">Vinhais</option>
+                                         <option value="bota">Cohama</option>
+                                         <option value="fla">Calhau</option>
+                                         <option value="flu">Anil</option>
+                                         <option value="vasco">Planalto Anil</option>
+                                     </select>
+                                     <label class="label-cliente-bairro">Bairro:</label>
+                                     <label class="label-cliente-cep">CEP:</label>
+                                     <input class="input-cliente-cep" name="cep" type="text" maxlength="6" placeholder="65000-000">
+                                     <label class="label-cliente-telefone">Telefone:</label>
+                                     <input class="input-cliente-telefone" name="telefone" type="text" placeholder="(xx) xxxxx-xxxx">
+                                     <label class="label-cliente-email">E-mail:</label>
+                                     <input class="input-cliente-email" name="email" type="email" maxlength="50" placeholder="exemple@exemple.com.br">
+                                     <input class="cadastro-btn-cancelar" type="reset" value="Cancelar">
+                                     <input class="cadastro-btn-salvar" type="submit" value="Salvar">
+
+                                </div>
+                            </li>
+                            <li>
+                                <input class="input-cliente" type="radio" name="aba" id="aba2">
+                                <label class="aba-cliente" for="aba2">Pessoa Jurídica</label>
+                                <div id="tab-conteudo2" class="tab-conteudo">
+                                    <label class="label-nome-cliente">Nome do cliente:</label>
+                                    <input class="input-nome-cliente maiuscula" type="text" maxlength="60" autofocus>
+                                    <label class="label-razao-cliente">Razão social:</label>
+                                    <input class="input-razao-cliente maiuscula" type="text" maxlength="60">
+                                    <label class="label-cliente-cnpj">CNPJ:</label>
+                                    <input class="input-cliente-cnpj" type="text" placeholder="Somente números">
+                                    <label class="label-cliente-endereco">Endereço:</label>
+                                    <input class="input-cliente-endereco" type="text" maxlength="60">
+                                     <select class="select-bairro" name="bairro">
+                                         <option value="---" selected>-----</option>
+                                         <option value="bota">Alemanha</option>
+                                         <option value="fla">Vila Palmeira</option>
+                                         <option value="flu">Cohratrac</option>
+                                         <option value="vasco">Vinhais</option>
+                                         <option value="bota">Cohama</option>
+                                         <option value="fla">Calhau</option>
+                                         <option value="flu">Anil</option>
+                                         <option value="vasco">Planalto Anil</option>
+                                     </select>
+                                     <label class="label-cliente-bairro">Bairro:</label>
+                                     <label class="label-cliente-cep">CEP:</label>
+                                     <input class="input-cliente-cep" type="text" maxlength="6" placeholder="65000-000">
+                                     <label class="label-cliente-telefone">Telefone:</label>
+                                     <input class="input-cliente-telefone" type="text" placeholder="(xx) xxxxx-xxxx">
+                                     <label class="label-cliente-email">E-mail:</label>
+                                     <input class="input-cliente-email" type="email" maxlength="50" placeholder="exemple@exemple.com.br">
+                                     <input class="cadastro-btn-cancelar" type="submit" value="Cancelar">
+                                     <input class="cadastro-btn-salvar" type="submit" value="Salvar">
+
+                                </div>
+                            </li>
+                        </form>
+                    </ul>
+                </aside>
+            </div>
+        </li>
+        <!-- Aba para o fornecedor -->
+        <li>
+            <input class="botao" type="radio" name="tabs" id="tab3">
+            <label class="rotulo" for="tab3">Fornecedor</label>
+            <div id="tab-conteudo-fornecedor-1" class="tab-conteudo-fornecedor">
+                <div class="cadastro-info">
+                    <h2>Cadastramento de fornecedores</h2>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+ </div>
